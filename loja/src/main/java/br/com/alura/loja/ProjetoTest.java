@@ -35,7 +35,7 @@ public class ProjetoTest {
 		
 		WebTarget target = client.target("http://localhost:8080");
 		
-		String conteudo = target.path("/projetos").request().get(String.class);
+		String conteudo = target.path("/projetos/1").request().get(String.class);
 		
 		Projeto projeto = (Projeto) new XStream().fromXML(conteudo);
 		
